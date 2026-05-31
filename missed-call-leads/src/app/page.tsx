@@ -129,7 +129,7 @@ export default function HomePage() {
               onClick={scrollToSignup}
               className="rounded-xl bg-[#f97316] px-7 py-4 text-base font-bold text-white shadow-lg shadow-[#f97316]/20 hover:bg-[#fb923c] transition-all hover:shadow-[#f97316]/30 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Get early access — it's free
+              Get early access — it&apos;s free
             </button>
             <Link
               href="/login"
@@ -234,7 +234,7 @@ export default function HomePage() {
             <br />a whole year.
           </h2>
           <p className="mt-5 text-lg text-white/80" style={{ fontFamily: "var(--font-body)" }}>
-            If we recover just one boiler callout a month, that's £2,000+ you weren't getting before.
+            If we recover just one boiler callout a month, that&apos;s £2,000+ you weren&apos;t getting before.
             The maths is simple.
           </p>
         </div>
@@ -312,9 +312,9 @@ function EarlyAccessForm() {
         className="rounded-2xl bg-emerald-50 border border-emerald-200 p-8"
       >
         <span className="text-4xl">🎉</span>
-        <h3 className="mt-3 text-xl font-bold text-emerald-800">You're on the list!</h3>
+        <h3 className="mt-3 text-xl font-bold text-emerald-800">You&apos;re on the list!</h3>
         <p className="mt-2 text-sm text-emerald-600" style={{ fontFamily: "var(--font-body)" }}>
-          We'll be in touch shortly. Keep your phone handy — we'll set you up within days.
+          We&apos;ll be in touch shortly. Keep your phone handy — we&apos;ll set you up within days.
         </p>
       </motion.div>
     );
@@ -378,7 +378,7 @@ function EarlyAccessForm() {
         {status === "loading" ? "Sending…" : "Request early access →"}
       </button>
       <p className="text-center text-xs text-slate-400" style={{ fontFamily: "var(--font-body)" }}>
-        No card required. We'll reach out within 24 hours.
+        No card required. We&apos;ll reach out within 24 hours.
       </p>
     </form>
   );
