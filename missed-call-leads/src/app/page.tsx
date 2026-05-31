@@ -7,7 +7,7 @@ import { useState, useRef } from "react";
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 18 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] as [number, number, number, number] },
 });
 
 const STATS = [
@@ -144,7 +144,7 @@ export default function HomePage() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.45, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           className="relative mx-auto mt-20 max-w-3xl grid grid-cols-1 gap-px rounded-2xl border border-white/8 bg-white/8 sm:grid-cols-3 overflow-hidden"
         >
           {STATS.map((s) => (
@@ -174,7 +174,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-md hover:border-[#f97316]/30 transition-all"
               >
                 <span className="text-3xl">{p.icon}</span>
@@ -204,7 +204,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 className="flex gap-6 rounded-2xl border border-white/6 bg-[#141416] p-7 hover:border-[#f97316]/20 transition-colors"
               >
                 <span className="shrink-0 text-4xl font-extrabold text-[#f97316]/30">{s.num}</span>
