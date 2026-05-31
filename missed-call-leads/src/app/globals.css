@@ -8,6 +8,13 @@
   --card: #ffffff;
   --border: #e2e8f0;
   --muted: #64748b;
+
+  /* Landing page tokens */
+  --dark: #0c0c0e;
+  --dark-card: #141416;
+  --dark-border: rgba(255,255,255,0.08);
+  --amber: #f97316;
+  --amber-light: #fb923c;
 }
 
 @theme inline {
@@ -18,11 +25,19 @@
   --color-card: var(--card);
   --color-border: var(--border);
   --color-muted: var(--muted);
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --color-dark: var(--dark);
+  --color-dark-card: var(--dark-card);
+  --color-amber: var(--amber);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
 }

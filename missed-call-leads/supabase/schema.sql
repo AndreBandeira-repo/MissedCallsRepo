@@ -86,6 +86,21 @@ create policy "Users read own calls"
     business_id in (select id from public.businesses where user_id = auth.uid())
   );
 
+-- Early access waitlist (public insert, no auth required)
+create table public.early_access (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  phone text not null,
+  created_at timestamptz not null default now()
+);
+
+alter table public.early_access enable row level security;
+
+create policy "Anyone can join waitlist"
+  on public.early_access for insert
+  with check (true);
+
 -- Service role bypasses RLS for webhooks (use service client server-side only)
 
 create or replace function public.handle_updated_at()
