@@ -15,7 +15,7 @@ function CaptureForm() {
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState(prefilledPhone);
-  const [jobType, setJobType] = useState(JOB_TYPES[0]);
+  const [jobType, setJobType] = useState<string>(JOB_TYPES[0]);
   const [message, setMessage] = useState("");
   const [urgency, setUrgency] = useState("");
   const [done, setDone] = useState(false);
